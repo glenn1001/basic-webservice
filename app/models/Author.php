@@ -8,7 +8,11 @@ class Author extends Model {
 		return $this->hasMany('Post');
 	}
 
+	public function creations() {
+		return $this->belongsToMany('Creation');
+	}
+
 	public static function relations() {
-		return ['posts'];
+		return ['creations', 'posts'];
 	}
 }
