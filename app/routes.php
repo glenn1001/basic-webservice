@@ -11,6 +11,9 @@
 |
 */
 
+Route::get('{model}.{extension?}', 'APIController@index');
+Route::get('{model}/{id}.{extension?}', 'APIController@show');
+
 Route::get('/', function()
 {
 	return View::make('hello');
